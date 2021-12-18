@@ -1,5 +1,5 @@
 module.exports = mongoose => {
-    var schema = mongoose.Schema(
+    const schema = mongoose.Schema(
         {
             url: String,
             name: String,
@@ -12,7 +12,11 @@ module.exports = mongoose => {
             seats: [{
                 type: String
             }],
-            currentLord: String
+            currentLord: String,
+            image: String,
+            swornMembers: [{
+                type: String
+            }],
         },
         { timestamps: true }
     );

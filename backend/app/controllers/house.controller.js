@@ -19,6 +19,8 @@ exports.create = (req, res) => {
         titles: req.body.titles,
         seats: req.body.seats,
         currentLord: req.body.currentLord,
+        image: req.body.image,
+        swornMembers: req.body.swornMembers
     });
 
     // Save House in the database

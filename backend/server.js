@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
-
+const db = require("./app/models");
 const app = express();
 
 var corsOptions = {
@@ -25,7 +25,6 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Lusha Live Backend application." });
 });
 
-const db = require("./app/models");
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
