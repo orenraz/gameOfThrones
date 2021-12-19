@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require('../models');
 const House = db.houses;
 
 // Create and Save a new House
@@ -40,7 +40,7 @@ exports.create = (req, res) => {
 // Retrieve all Houses from the database.
 exports.findAll = (req, res) => {
     const name = req.query.name;
-    var condition = name ? { name: { $regex: new RegExp(name), $options: "i" } } : {};
+    const condition = name ? { name: { $regex: new RegExp(name), $options: "i" } } : {};
 
     House.find(condition)
         .then(data => {

@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require('../models');
 const Character = db.characters;
 
 // Create and Save a new Character
@@ -38,7 +38,7 @@ exports.create = (req, res) => {
 // Retrieve all Characters from the database.
 exports.findAll = (req, res) => {
     const name = req.query.name;
-    var condition = name ? { name: { $regex: new RegExp(name), $options: "i" } } : {};
+    const condition = name ? { name: { $regex: new RegExp(name), $options: "i" } } : {};
 
     Character.find(condition)
         .then(data => {

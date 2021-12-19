@@ -30,6 +30,18 @@ npm i
 npm start
 ```
 
+#### connecting to mongo docker with Robo 3T
+create a new connection:
+    - Connection
+        - address: localhost
+        - port: 27018
+    - Authentication
+        - Perform authentication: checked
+        - user: root
+        - password: 123456
+        - Auth Mechanism: SCRAM-SHA-1
+
+
 ## Tasks list
 - run client and server and fix issues until they both works
 ### client 
@@ -47,10 +59,12 @@ npm start
     - implement a search box that will search member by name (bonus - add debounce)
     - create a component to display the following data: { name, url, gender, culture, born, died, titles, aliases}
 - refactor API calls - create a dedicated place to hande http client requests
+- instead of using the Context to fetch selectedHouse in house page, change the code so that clicking on a house will redirect to /house/<id> and then pull the data from the context
 
 ### back-end 
 - add schema validation on DB
 - add schema validation on controller
+- implement cache when fetching data from houses/characters with 30 sec TTL
 - use logger
 - TODO: remove this code that crashed the app
 - api returns 500 when data not found, return 400

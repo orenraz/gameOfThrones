@@ -1,7 +1,7 @@
 module.exports = app => {
-    const houses = require("../controllers/house.controller.js");
+    const houses = require('../controllers/house.controller.js');
 
-    var router = require("express").Router();
+    const router = require("express").Router();
 
     // Create a new house
     router.post("/", houses.create);

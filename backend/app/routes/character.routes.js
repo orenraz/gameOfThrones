@@ -1,7 +1,7 @@
 module.exports = app => {
-    const character = require("../controllers/character.controller.js");
+    const character = require('../controllers/character.controller.js');
 
-    var router = require("express").Router();
+    const router = require("express").Router();
 
     // Create a new character
     router.post("/", character.create);

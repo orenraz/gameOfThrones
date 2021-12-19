@@ -1,6 +1,6 @@
 require('dotenv').config();
-const db = require("./app/models");
-const mockHouses = require("./mock/houses");
+const db = require('./app/models');
+const mockHouses = require('./mock/houses');
 
 db.mongoose
     .connect(db.url, {
@@ -8,7 +8,7 @@ db.mongoose
         useUnifiedTopology: true
     })
     .then(() => {
-        console.log("Connected to the database!");
+        console.log('Connected to the database!');
         const seedDB = async () => {
             await db.houses.deleteMany({});
             await db.houses.insertMany(mockHouses);
@@ -18,7 +18,7 @@ db.mongoose
         })
     })
     .catch(err => {
-        console.log("Cannot connect to the database!", err);
+        console.log('Cannot connect to the database!', err);
         process.exit();
     });
 
