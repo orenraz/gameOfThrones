@@ -41,7 +41,16 @@ npm start
     - fetch should be asynchronous, and by order - the order will be set by their index in the swornMembers array. so if you have 3 swornMembers in index 0, 1, 2 with id's  200, 100, 300 than fetch them all but once 200 return render it to the screen, then 100 and lastly 300)
     - data for sworn member should look like this : { name, url, gender, culture, born, died, titles, aliases}
     - implement a save members to DB functionality
+    - fix images proportions
+    - on hover - darken image
 - create a Characters page
     - implement a search box that will search member by name (bonus - add debounce)
     - create a component to display the following data: { name, url, gender, culture, born, died, titles, aliases}
-- refactor API calls 
+- refactor API calls - create a dedicated place to hande http client requests
+
+### back-end 
+- add schema validation on DB
+- add schema validation on controller
+- use logger
+- TODO: remove this code that crashed the app
+- api returns 500 when data not found, return 400

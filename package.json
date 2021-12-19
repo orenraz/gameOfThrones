@@ -1,11 +1,4 @@
 {
-  "name": "Lusha Live App",
-  "version": "1.0.0",
-  "author": "oren raz",
-  "license": "ISC",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-  },
   "devDependencies": {
     "@types/cors": "^2.8.10"
   }
