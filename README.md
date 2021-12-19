@@ -43,7 +43,7 @@ create a new connection:
 
 
 ## Tasks list
-- run client and server and fix issues until they both works
+
 ### client 
 - when selecting a house from houses page, create house page that will
     - create house page that will display house data
@@ -65,6 +65,6 @@ create a new connection:
 - add schema validation on DB
 - add schema validation on controller
 - implement cache when fetching data from houses/characters with 30 sec TTL
+- implement unit tests
 - use logger
-- TODO: remove this code that crashed the app
 - api returns 500 when data not found, return 400
