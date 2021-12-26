@@ -3,6 +3,7 @@ import Gallery from 'react-photo-gallery';
 import { useHistory } from 'react-router-dom';
 import AppContext from './../../context/appContext';
 import {Container} from '../../styles';
+import {ErrorMessage} from "../../components/errorMessage/errorMessage";
 
 const BASE_URL = 'http://localhost:6868';
 
@@ -10,11 +11,13 @@ const Houses = () => {
     const history = useHistory();
     const { setSelectedHouse, houses, setHouses } = useContext(AppContext);
     const [photos, setPhotos] = useState([]);
+    const [hasError, setHasError] = useState(false);
 
     const getHouses = () => {
         fetch(`${BASE_URL}/api/houses`)
             .then(response => response.json())
-            .then(data => {setHouses(data)});
+            .then(data => {setHouses(data)})
+            .catch(err => { setHasError(true); });
     }
 
     useEffect(() => {
@@ -40,13 +43,15 @@ const Houses = () => {
         history.push('/house');
     }
 
-    return (
+    const gallery = (<Gallery
+        photos={photos}
+        onClick={onHouseClick}
+        margin={10}
+    />);
+
+    return  (
         <Container >
-            <Gallery
-                photos={photos}
-                onClick={onHouseClick}
-                margin={10}
-            />
+            {hasError ? <ErrorMessage/> : gallery}
         </Container>
     );
 };
