@@ -53,7 +53,7 @@ function RightNav(props) {
         <Route exact path='/houses'>
           <Houses/>
         </Route>
-         <Route exact path='/house'>
+         <Route exact path='/house/:id'>
              <House/>
          </Route>
         <Route exact path='/characters'>

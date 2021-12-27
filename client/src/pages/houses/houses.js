@@ -40,7 +40,7 @@ const Houses = () => {
     const onHouseClick = e => {
         const house = houses.find(house => house.id === e.target.id);
         setSelectedHouse(house);
-        history.push('/house');
+        history.push(`/house/${house.id}`);
     }
 
     const gallery = (<Gallery
