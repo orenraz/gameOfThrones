@@ -1,5 +1,12 @@
 # Lusha Live App  
-  
+
+The repo composed of:
+- react app client. 
+- express backend.
+- mongoDB
+- Docker container to run the DB + app
+- mongoose orm
+
 ## Requirements  
   
  - [Node v7.6+](https://nodejs.org/en/download/current/) or [Docker](https://www.docker.com/)  
