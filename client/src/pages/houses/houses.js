@@ -13,16 +13,15 @@ const Houses = () => {
     const [photos, setPhotos] = useState([]);
     const [hasError, setHasError] = useState(false);
 
-    const getHouses = () => {
-        fetch(`${BASE_URL}/api/houses`)
-            .then(response => response.json())
-            .then(data => {setHouses(data)})
-            .catch(err => { setHasError(true); });
-    }
-
     useEffect(() => {
+        const getHouses = () => {
+            fetch(`${BASE_URL}/api/houses`)
+                .then(response => response.json())
+                .then(data => {setHouses(data)})
+                .catch(err => { setHasError(true); });
+        }
         getHouses();
-    }, []);
+    }, [setHouses]);
 
     useEffect(() => {
         setPhotos(houses.map((house, index) => {
