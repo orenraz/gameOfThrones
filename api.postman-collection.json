@@ -69,7 +69,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:6868/",
+					"raw": "http://localhost:6868/health",
 					"protocol": "http",
 					"host": [
 						"localhost"
