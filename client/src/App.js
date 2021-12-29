@@ -1,9 +1,13 @@
 import './App.css';
 import React from 'react';
-import Menu from './components/menu/Navbar';
 import GlobalsStyles from './globalStyles';
 import { AppContext } from './context';
 import useAppContext from './hooks/useAppContext';
+import Layout from "./components/layout";
+import {
+    BrowserRouter as Router
+} from 'react-router-dom';
+import Routes from "./components/routes";
 
 const App = () => {
     const value  = useAppContext();
@@ -11,7 +15,10 @@ const App = () => {
     return (
         <AppContext.Provider value={value}>
             <GlobalsStyles />
-            <Menu />
+            <Router>
+                <Layout />
+                <Routes />
+            </Router>
         </AppContext.Provider>
     )
 };

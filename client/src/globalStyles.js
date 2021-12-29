@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: auto;
     background-color: #232831;
   }
+  
+  houseImg {
+    object-fit: cover;
+  }
 
   @keyframes Spin {
     from {

@@ -7,4 +7,8 @@ export const HousesBox = styled.div`
   border-radius: 10px;
   position: relative;
   text-align: center;
+  
+  > houseImg {
+    object-fit: cover;
+  }
 `
